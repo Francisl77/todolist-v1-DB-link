@@ -4,6 +4,8 @@ const app = express();
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 
+app.use(express.static('Public'));
+
 mongoose.connect("mongodb+srv://francis-admin:saltA_1897@cluster0.cwzz4qs.mongodb.net/todolistDB", { useNewUrlParser: true });
 
 mongoose.set("strictQuery", true);
